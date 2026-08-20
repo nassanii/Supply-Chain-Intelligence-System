@@ -88,7 +88,7 @@ Three models were benchmarked on the stratified test dataset:
 ### 1. Environment Setup
 ```bash
 # Clone repository
-git clone https://github.com/your-username/Supply-Chain-Intelligence-System.git
+git clone https://github.com/nassanii/Supply-Chain-Intelligence-System.git
 cd "Supply Chain Intelligence System"
 
 # Create and activate virtual environment
@@ -99,14 +99,26 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Run Preprocessing Pipeline
-To process raw data and fit preprocessor artifacts:
+### 2. Download Dataset
+Download `DataCoSupplyChainDataset.csv` from [Kaggle](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data) and place it inside:
+```text
+data/raw/DataCoSupplyChainDataset.csv
+```
+
+### 3. Run Preprocessing Pipeline
+To process raw data, perform leakage-free splitting, and save preprocessor artifacts:
 ```bash
 python src/preprocessing.py
 ```
 
-### 3. Run Production Inference Engine
-To run predictions on new incoming order payloads:
+### 4. Train Models
+To train models and evaluate baseline metrics, run:
+```text
+notebooks/model_training.ipynb
+```
+
+### 5. Run Inference Engine
+To test predictions on sample order payloads:
 ```bash
 python src/predict.py
 ```
