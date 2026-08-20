@@ -15,6 +15,16 @@ In global logistics and supply chain management, late deliveries result in custo
 
 ---
 
+## Dataset & Source
+
+The model is trained on the real-world **DataCo Smart Supply Chain Dataset**, containing over 180,000 supply chain transactions across global markets.
+
+* **Dataset Source**: [DataCo Smart Supply Chain for Big Data (Kaggle)](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data)
+* **Target Variable**: `Late_delivery_risk` (Binary: `1` = High Risk of Late Delivery, `0` = On-Time Delivery)
+* **Dataset Size**: 180,519 records with 53 initial attributes spanning financial, geographic, and shipping dimensions.
+
+---
+
 ## Project Architecture & Modular Design
 
 The codebase follows professional software engineering standards, strictly separating exploratory analysis (notebooks) from modular, reusable production Python code (`src/`):
