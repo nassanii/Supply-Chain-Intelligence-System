@@ -105,20 +105,25 @@ Download `DataCoSupplyChainDataset.csv` from [Kaggle](https://www.kaggle.com/dat
 data/raw/DataCoSupplyChainDataset.csv
 ```
 
-### 3. Run Preprocessing Pipeline
-To process raw data, perform leakage-free splitting, and save preprocessor artifacts:
+### 3. Run Exploratory Pipeline (Cleaning & Feature Engineering)
+To run the exploratory notebook pipeline from scratch, execute the following notebooks in order:
+1. **Data Cleaning**: `notebooks/data_cleaning.ipynb` (outputs `clean_supply_chain.csv`)
+2. **Feature Engineering**: `notebooks/feature_engineering.ipynb` (outputs `featured_supply_chain.csv`)
+
+### 4. Run Preprocessing Pipeline
+To process the featured dataset, apply leakage-free splitting, and build preprocessor artifacts:
 ```bash
 python src/preprocessing.py
 ```
 
-### 4. Train Models
-To train models and evaluate baseline metrics, run:
+### 5. Train Models & Benchmark
+To train baseline models (Logistic Regression, Random Forest, XGBoost) and evaluate metrics:
 ```text
 notebooks/model_training.ipynb
 ```
 
-### 5. Run Inference Engine
-To test predictions on sample order payloads:
+### 6. Run Production Inference Engine
+To test real-time predictions on incoming order payloads:
 ```bash
 python src/predict.py
 ```
