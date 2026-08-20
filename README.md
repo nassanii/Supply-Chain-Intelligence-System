@@ -105,4 +105,3 @@ python src/predict.py
 
 ## Author
 Developed as a production-grade Machine Learning portfolio system.
-# Supply-Chain-Intelligence-System
